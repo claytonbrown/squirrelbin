@@ -1,0 +1,16 @@
+<h1>All Acorns</h1>
+<table class="table table-hover" ng-if="!loading">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Author</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="acorn in acorns | orderBy: 'name'">
+        <th><i ng-show="acorn.sticky" class="glyphicon glyphicon-lock"></i> {{acorn.name}}</th>
+        <td>{{acorn.author}}
+        </th>
+    </tr>
+    </tbody>
+</table>

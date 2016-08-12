@@ -1,0 +1,13 @@
+<h1 ng-hide="editing">New Acorn</h1>
+<h1 ng-show="editing">Editing {{acorn.name}}</h1>
+<div ng-if="!loading">
+    <div class="form-group">
+        <label for="acorn-name">Acorn Name</label>
+        <input type="text" class="form-control" id="acorn-name" ng-model="acorn.name">
+    </div>
+    <div class="form-group">
+        <label for="acorn-author">Author</label>
+        <input type="text" class="form-control" id="acorn-author" ng-model="acorn.author">
+    </div>
+    <button class="btn btn-primary" ng-click="save()">Submit</button>
+</div>
