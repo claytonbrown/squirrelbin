@@ -42,7 +42,7 @@ angular.module('app', ['ngRoute', 'ui.ace'])
     .controller('AcornListController', ['$scope', '$location', '$http', function ($scope, $location, $http) {
         $scope.acornREST('get', ENDPOINT)
             .then(function (response) {
-                $scope.acorns = response.data;
+                $scope.acorns = response.data.Items;
             });
     }])
 
